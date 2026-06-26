@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="REST API Test Suite" verbose="1" parallel="classes" thread-count="3">
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="GET Tests">
+        <classes>
+            <class name="com.restapi.tests.GetPostsTest"/>
+        </classes>
+    </test>
+
+    <test name="POST Tests">
+        <classes>
+            <class name="com.restapi.tests.CreatePostTest"/>
+        </classes>
+    </test>
+
+    <test name="PUT and PATCH Tests">
+        <classes>
+            <class name="com.restapi.tests.UpdatePostTest"/>
+        </classes>
+    </test>
+
+    <test name="DELETE Tests">
+        <classes>
+            <class name="com.restapi.tests.DeletePostTest"/>
+        </classes>
+    </test>
+
+    <test name="API Chaining Tests">
+        <classes>
+            <class name="com.restapi.tests.ApiChainingTest"/>
+        </classes>
+    </test>
+
+</suite>
